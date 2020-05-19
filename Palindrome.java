@@ -18,16 +18,18 @@ import java.util.Stack;
         boolean result = isPalindrome(n1);
         System.out.println("Is it palindrome: "+result);
     }
- static class Node {
+    static class Node {
         int data;
         Node next;
-        Node(int tmp) {
+        Node(int tmp) 
+        {
             data = tmp;
         }
     }
  
-    static boolean isPalindrome(Node head) {
- Node tempNode = head;
+    static boolean isPalindrome(Node head) 
+    {
+        Node tempNode = head;
         Stack<Integer> stack = new Stack<Integer>();
         while(tempNode != null) {
             stack.push(tempNode.data);
@@ -39,7 +41,7 @@ import java.util.Stack;
             }
             head = head.next;
         }
- return Boolean.TRUE;
+        return Boolean.TRUE;
     }
 }
 
